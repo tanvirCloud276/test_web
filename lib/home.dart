@@ -12,10 +12,39 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Test Web")),
-      body: Container(
-        color: Colors.black,
-        height: MediaQuery.of(context).size.height,
-        width: double.infinity,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Welcome to the Learning Site',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 16),
+            Text(
+              'Explore a wide range of courses and expand your knowledge.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 18,
+              ),
+            ),
+            SizedBox(height: 32),
+            ElevatedButton(
+              onPressed: () {
+                // Action when button is pressed
+                // Example: Navigate to a course catalog page
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => CourseCatalogPage()),
+                // );
+              },
+              child: Text('Get Started'),
+            ),
+          ],
+        ),
       ),
     );
   }

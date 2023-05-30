@@ -3,7 +3,9 @@ name: Flutter Web CI/CD
 on:
   push:
     branches:
-      - master
+      # - master
+      - dev
+      - test
 
 jobs:
   build:

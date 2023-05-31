@@ -12,20 +12,20 @@
 #     runs-on: ubuntu-latest
 
 #     steps:
-#     - name: Set up Flutter
-#       uses: subosito/flutter-action@v2
-#       with:
-#         flutter-version: '3.0.2'
+    # - name: Set up Flutter
+    #   uses: subosito/flutter-action@v2
+    #   with:
+    #     flutter-version: '3.0.2'
 
-#     - name: Check out code
-#       uses: actions/checkout@v2
+    # - name: Check out code
+    #   uses: actions/checkout@v2
 
-#     - name: Install dependencies
-#       run: flutter pub get
+    # - name: Install dependencies
+    #   run: flutter pub get
 
 
-#     - name: Build web
-#       run: flutter build web
+    # - name: Build web
+    #   run: flutter build web
 
   
 
@@ -54,3 +54,18 @@ jobs:
     - run: flutter pub get
     - run: flutter build apk
     - run: flutter build appbundle
+    
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.0.2'
+
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: flutter pub get
+
+
+    - name: Build web
+      run: flutter build web

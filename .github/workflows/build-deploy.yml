@@ -36,7 +36,7 @@ name: Flutter Action
 on:
   push:
     branches:
-      # - master
+      - master
       - dev
 
 jobs:
